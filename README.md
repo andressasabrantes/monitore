@@ -21,6 +21,8 @@ O Gerenciador de Finanças Pessoais foi desenvolvido utilizando as seguintes tec
 
 - Bootstrap: Um framework front-end que oferece componentes e estilos pré-definidos para criar uma interface de usuário responsiva e visualmente atraente.
 
+- JQuery: Uma biblioteca JavaScript rápida e leve usada para scripts no lado do cliente e manipulação do DOM.
+
 - SQL Server: Um sistema de gerenciamento de banco de dados relacional usado para armazenar e recuperar os dados do sistema.
 
 ## Conclusão
