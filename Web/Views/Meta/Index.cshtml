@@ -1,0 +1,23 @@
+
+
+<div class="contanier p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h4 class="text-white-65">Minhas Metas</h4>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="MetaFinanceira" asp-action="MostrarViewCadastrar" class="btn btn-secondary">Criar nova meta</a>
+        </div>
+    </div>
+    <br /><br />
+</div>
+
+<script src="~/js/Pages/metafinanceira.js" asp-append-version="true"></script>
+<script>
+    metafinanceira.init({
+        urls: {
+            index: '@Url.Action("Index", "Meta")',
+            mostrarViewCadastrar: '@Url.Action("MostrarViewCadastrar", "Meta")'
+        }
+    });
+</script>

@@ -1,0 +1,16 @@
+@model MetaFinanceira
+
+<h1>Nova Meta</h1>
+
+<form id="formCadastrarMeta" onsubmit="">
+    <label asp-for="Titulo"></label>
+    <input type="text" asp-for="Titulo" placeholder="Qual será o nome do seu cofrinho?">
+
+    <label asp-for="Descricao"></label>
+    <input type="text" asp-for="Descricao" placeholder="Qual o objetivo da sua meta?">
+
+    <label asp-for="ValorMeta"></label>
+    <input type="text" asp-for="ValorMeta" placeholder="Qual valor você quer juntar no total?">
+
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+</form>
