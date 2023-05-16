@@ -10,6 +10,7 @@ Exclusão de metas: Caso uma meta não seja mais relevante, os usuários podem e
 
 Visualização de metas: O sistema oferece uma visualização clara e organizada de todas as metas registradas pelo usuário, incluindo detalhes como descrição e valor.
 
+
 ## Tecnologias Utilizadas
 O Gerenciador de Finanças Pessoais foi desenvolvido utilizando as seguintes tecnologias:
 
