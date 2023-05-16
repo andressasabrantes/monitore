@@ -1,6 +1,6 @@
 namespace Web.Controllers
 {
-    [Route("Meta")]
+    [Route("MetaFinanceira")]
     public class MetaFinanceiraController : Controller
     {
         public IActionResult Index() => View();
