@@ -8,6 +8,7 @@ namespace Web.Controllers
         {
             _metafinanceiraRepository = metafinanceiraRepository;
         }
+        
         public IActionResult Index() => View();
 
         [HttpGet("cadastrar")]
