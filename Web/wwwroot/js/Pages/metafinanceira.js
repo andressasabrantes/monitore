@@ -3,7 +3,6 @@ var metafinanceira = (function () {
         urls: {
             index: '',
             cadastrar: ''
-            // buscar: ''
         }
     }
 
@@ -20,18 +19,8 @@ var metafinanceira = (function () {
         });
     };
 
-//     var Buscar = function () {
-//         $.get(configs.urls.buscar).done(function (html) {
-// /*          $(".container-cadastrar").hide();
-//             $(".container-lista").html(html);
-//             $(".container-lista").show(); */
-//         }).fail(function () {
-//         })
-//     };
-
     return {
         init: init,
         Cadastrar: Cadastrar
-        // Buscar: Buscar
     }
 })();

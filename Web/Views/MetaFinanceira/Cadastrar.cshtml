@@ -24,17 +24,8 @@
         </div>
         <div class="mt-4">
             <button type="submit" class="btn btn-success" style="width:150px">Criar</button>
-            <a asp-controller="MetaFinanceira" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            <a asp-controller="MetaFinanceira" asp-action="BuscarMetaFinanceira" class="btn btn-secondary" style="width:150px">
                 Voltar
             </a>
         </div>
 </form>
-
-<script src="~/js/Pages/metafinanceira.js" asp-append-version="true"></script>
-<script>
-    metafinanceira.init({
-        urls: {
-            cadastrar: '@Url.Action("Cadastrar", "MetaFinanceira")'
-        }
-    });
-</script>
