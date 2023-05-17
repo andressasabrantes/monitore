@@ -8,7 +8,7 @@ namespace Web.Controllers
         {
             _metafinanceiraRepository = metafinanceiraRepository;
         }
-        
+
         public IActionResult Index() => View();
 
         [HttpGet("cadastrar")]
@@ -20,5 +20,8 @@ namespace Web.Controllers
             await _metafinanceiraRepository.CadastrarAsync(meta);
             return Ok();
         }
+
+        [HttpGet("buscar")]
+        public async Task<IActionResult> BuscarMetaFinanceira() => View("Index", await _metafinanceiraRepository.BuscarMetaFinanceiraAsync());
     }
 }
