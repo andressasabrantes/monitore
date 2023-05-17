@@ -1,16 +1,30 @@
 @model MetaFinanceira
 
-<h1>Nova Meta</h1>
-
 <form id="formCadastrarMeta" onsubmit="">
-    <label asp-for="Titulo"></label>
-    <input type="text" asp-for="Titulo" placeholder="Qual será o nome do seu cofrinho?">
-
-    <label asp-for="Descricao"></label>
-    <input type="text" asp-for="Descricao" placeholder="Qual o objetivo da sua meta?">
-
-    <label asp-for="ValorMeta"></label>
-    <input type="text" asp-for="ValorMeta" placeholder="Qual valor você quer juntar no total?">
-
-    <button type="submit" class="btn btn-success">Cadastrar</button>
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h3 class="text-white-50">Criar nova meta</h3>
+            <hr />
+        </div>
+        @* <div asp-validation-summary="All"></div> *@
+        <div class="mb-3">
+            <label asp-for="Titulo"></label>
+            <input asp-for="Titulo"  class="form-control" placeholder="Qual será o nome da sua nova meta financeira?"/>
+            <span asp-validation-for="Titulo" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Descricao"></label>
+            <input asp-for="Descricao" class="form-control" placeholder="Qual o objetivo da sua meta? Faça uma breve descrição..."/>
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ValorMeta"></label>
+            <input asp-for="ValorMeta" class="form-control" placeholder="Qual valor você quer juntar no total?"/>
+            <span asp-validation-for="ValorMeta" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success" style="width:150px">Criar</button>
+        <a asp-controller="MetaFinanceira" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Voltar
+        </a>
+    </div>
 </form>
