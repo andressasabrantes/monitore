@@ -2,7 +2,8 @@ var metafinanceira = (function () {
     var configs = {
         urls: {
             index: '',
-            cadastrar: ''
+            cadastrar: '',
+            excluir: ''
         }
     }
 
@@ -20,8 +21,19 @@ var metafinanceira = (function () {
         });
     };
 
+    var Excluir = function (id) {
+        var model = {id: id};
+        $.post(configs.urls.excluir, model).done(() => {
+            location.href = configs.urls.index;
+            site.toast.success('Meta financeira excluida com sucesso!')
+        }).fail((msg) => {
+            site.toast.error(msg);
+        });
+    };
+
     return {
         init: init,
-        Cadastrar: Cadastrar
+        Cadastrar: Cadastrar,
+        Excluir: Excluir
     }
 })();

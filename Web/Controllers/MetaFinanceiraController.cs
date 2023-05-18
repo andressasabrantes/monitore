@@ -23,5 +23,21 @@ namespace Web.Controllers
 
         [HttpGet]
         public async Task<IActionResult> BuscarMetaFinanceira() => View("Index", await _metafinanceiraRepository.BuscarMetaFinanceiraAsync());
+
+        [HttpGet("excluir")]
+        public async Task<IActionResult> MostrarViewExcluir(int id) 
+        {
+            if (id == default)
+                return BadRequest("Meta financeira não encontrada");
+
+            return View("Excluir", await _metafinanceiraRepository.BuscarMetaFinanceiraPorIdAsync(id));
+        }
+
+        [HttpPost("excluir")]
+        public async Task<IActionResult> Excluir(int id) 
+        {
+            await _metafinanceiraRepository.ExcluirAsync(id);
+            return Ok();
+        }
     }
 }

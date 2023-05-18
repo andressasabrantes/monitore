@@ -1,0 +1,38 @@
+@model MetaFinanceira
+
+<form method="" asp-action="">
+    <input asp-for="Id" hidden />
+        <div class="mt-5 mb-4 border-bottom border-secondary">
+            <h4 class="mt-3 mb-3 text-light">Deseja realmente excluir a meta financeira @Model.Titulo?</h4>
+        </div>
+        @*<div asp-validation-summary="All"></div>*@
+        <div class="mb-3">
+            <label asp-for="Titulo"></label>
+            <input asp-for="Titulo" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Descricao"></label>
+            <input asp-for="Descricao" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="ValorMeta"></label>
+            <input asp-for="ValorMeta" disabled class="form-control" />
+        </div>
+        <div class="mt-6">
+            <button type="submit" class="btn btn-danger" style="width:150px" onclick="metafinanceira.Excluir(@Model.Id)">Delete</button>
+            <a asp-controller="MetaFinanceira" asp-action="Index" class="btn btn-secondary" style="width: 150px">
+                Back to List
+            </a>
+        </div>
+
+</form>
+
+<script src="~/js/Pages/metafinanceira.js" asp-append-version="true"></script>
+<script>
+    metafinanceira.init({
+        urls: {
+            excluir: '@Url.Action("Excluir", "MetaFinanceira")',
+            index: '@Url.Action("Index", "MetaFinanceira")'
+        }
+    });
+</script>

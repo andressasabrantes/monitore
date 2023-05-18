@@ -18,5 +18,17 @@ namespace Data.Repositories
         {
             return await _dbContext.MetasFinanceiras.ToListAsync();
         }
+
+        public async Task<MetaFinanceira> BuscarMetaFinanceiraPorIdAsync(int id) 
+        {
+            return await _dbContext.MetasFinanceiras.FindAsync(id);
+        }
+
+        public async Task ExcluirAsync(int id) 
+        {
+            var metafinanceira = await BuscarMetaFinanceiraPorIdAsync(id);
+            _dbContext.MetasFinanceiras.Remove(metafinanceira);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }

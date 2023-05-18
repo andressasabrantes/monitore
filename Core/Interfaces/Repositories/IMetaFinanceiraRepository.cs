@@ -6,5 +6,7 @@ namespace Core.Interfaces.Repositories
     {
         Task CadastrarAsync(MetaFinanceira meta);
         Task<IEnumerable<MetaFinanceira>> BuscarMetaFinanceiraAsync();
+        Task<MetaFinanceira> BuscarMetaFinanceiraPorIdAsync(int id);
+        Task ExcluirAsync(int id);
     }
 }
