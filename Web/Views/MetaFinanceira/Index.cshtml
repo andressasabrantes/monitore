@@ -41,34 +41,32 @@
     </tbody>
 </table> *@
 
+@foreach (var metafinanceira in Model)
+{
+    <tr>
+        <div class="card border-secondary mb-3">
+        <div class="card-body border-top border-info">
+            <h4 class="card-title border-secondary "><td>@metafinanceira.Titulo</td></h4>
+            <p class="card-text text-light"><td>@metafinanceira.Descricao</td></p>
+            <h6 class="card-title text-white mb-1">
+                <td>R$ @metafinanceira.ValorMeta
+                    <div class="d-flex justify-content-end mb-0" role="group">
+                        <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-primary mx-1"> <i class="bi bi-pencil-square"></i>Detalhes</a>
+                        <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-warning mx-1"> <i class="bi bi-trash-fill"></i>Editar</a>
+                        <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-danger mx-1"> <i class="bi bi-trash-fill"></i>Deletar</a>
+                    </div>
+                </td>
+            </h6>
+        </div>
+        </div>
+    </tr>
+}
+
 <script src="~/js/Pages/metafinanceira.js" asp-append-version="true"></script>
 <script>
     metafinanceira.init({
         urls: {
-            index: '@Url.Action("Index", "Metafinanceira")'
+            index: '@Url.Action("Index", "MetaFinanceira")'
         }
     });
 </script>
-
-@foreach (var metafinanceira in Model)
-            {
-                <tr>
-                    <div class="card border-secondary mb-3">
-                    <div class="card-body border-top border-info">
-                        <h4 class="card-title border-secondary "><td>@metafinanceira.Titulo</td></h4>
-                        <p class="card-text text-light"><td>@metafinanceira.Descricao</td></p>
-                        <h6 class="card-title text-white mb-1">
-                            <td>R$ @metafinanceira.ValorMeta
-                                <div class="d-flex justify-content-end mb-0" role="group">
-                                    <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-primary mx-1"> <i class="bi bi-pencil-square"></i>Detalhes</a>
-                                    <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-warning mx-1"> <i class="bi bi-trash-fill"></i>Editar</a>
-                                    <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-danger mx-1"> <i class="bi bi-trash-fill"></i>Deletar</a>
-                                </div>
-                            </td>
-                        </h6>
-                    </div>
-                    </div>
-                </tr>
-            }
-
-

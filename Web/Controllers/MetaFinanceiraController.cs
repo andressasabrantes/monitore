@@ -21,7 +21,7 @@ namespace Web.Controllers
             return Ok();
         }
 
-        [HttpGet("buscar")]
+        [HttpGet]
         public async Task<IActionResult> BuscarMetaFinanceira() => View("Index", await _metafinanceiraRepository.BuscarMetaFinanceiraAsync());
     }
 }

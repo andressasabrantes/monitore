@@ -29,3 +29,13 @@
             </a>
         </div>
 </form>
+
+<script src="~/js/Pages/metafinanceira.js" asp-append-version="true"></script>
+<script>
+    metafinanceira.init({
+        urls: {
+            index: '@Url.Action("Index", "MetaFinanceira")',
+            cadastrar: '@Url.Action("Cadastrar", "MetaFinanceira")'
+        }
+    });
+</script>
