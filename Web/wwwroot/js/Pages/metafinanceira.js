@@ -31,6 +31,8 @@ var metafinanceira = (function () {
         });
     };
 
+    
+
     return {
         init: init,
         Cadastrar: Cadastrar,

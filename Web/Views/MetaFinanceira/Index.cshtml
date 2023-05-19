@@ -52,7 +52,7 @@
                 <td>R$ @metafinanceira.ValorMeta
                     <div class="d-flex justify-content-end mb-0" role="group">
                         <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-primary mx-1"> <i class="bi bi-pencil-square"></i>Detalhes</a>
-                        <a asp-controller="MetaFinanceira" asp-action="" asp-route-id="" class="btn btn-outline-warning mx-1"> <i class="bi bi-trash-fill"></i>Editar</a>
+                        <a asp-controller="MetaFinanceira" asp-action="MostrarViewEditar" asp-route-id="@metafinanceira.Id" class="btn btn-outline-warning mx-1"> <i class="bi bi-trash-fill"></i>Editar</a>
                         <a asp-controller="MetaFinanceira" asp-action="MostrarViewExcluir" asp-route-id="@metafinanceira.Id" class="btn btn-outline-danger mx-1"> <i class="bi bi-trash-fill"></i>Deletar</a>
                     </div>
                 </td>

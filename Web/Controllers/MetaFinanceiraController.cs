@@ -39,5 +39,21 @@ namespace Web.Controllers
             await _metafinanceiraRepository.ExcluirAsync(id);
             return Ok();
         }
+
+        [HttpGet("editar")]
+        public async Task<IActionResult> MostrarViewEditar(int id) 
+        {
+            if (id == default) 
+                return BadRequest("Meta não encontrada");
+            
+            return View("Editar", await _metafinanceiraRepository.BuscarMetaFinanceiraPorIdAsync(id));
+        }
+
+        [HttpPost("editar")]
+        public async Task<IActionResult> Editar(MetaFinanceira metafinanceira)
+        {
+            await _metafinanceiraRepository.EditarAsync(metafinanceira);
+            return Ok();
+        }
     }
 }

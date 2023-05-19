@@ -1,0 +1,41 @@
+@model MetaFinanceira
+
+<form id="formEditarMeta" onsubmit="metafinanceira.Cadastrar()">
+
+        <div class="border-bottom border-3 border-secondary mt-5">
+            <h3 class="text-white-50">Editar meta @Model.Titulo</h3>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label mt-4" asp-for="Titulo">Nome</label>
+            <input type="text" asp-for="Titulo" class="form-control" placeholder="Qual será o nome da sua nova meta financeira?">
+        </div>
+        <div class="form-group">
+            <label asp-for="Descricao" class="form-label mt-4">Descrição</label>
+            <textarea class="form-control" asp-for="Descricao" rows="3" placeholder="Qual o objetivo da sua meta? Faça uma breve descrição..."></textarea>
+        </div>        
+        <div class="form-group">
+        <label asp-for="ValorMeta" class="form-label mt-4">Valor Meta</label>
+        <div class="form-group">
+            <div class="input-group mb-3">
+            <span class="input-group-text">R$</span>
+            <input type="text" asp-for="ValorMeta" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Qual valor você quer juntar no total?">
+            <span class="input-group-text">.00</span>
+            </div>
+        </div>
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success" style="width:150px">Editar</button>
+            <a asp-controller="MetaFinanceira" asp-action="BuscarMetaFinanceira" class="btn btn-secondary" style="width:150px">
+                Voltar
+            </a>
+        </div>
+</form>
+
+<script src="~/js/Pages/metafinanceira.js" asp-append-version="true"></script>
+<script>
+    metafinanceira.init({
+        urls: {
+            excluir: '@Url.Action("Excluir", "MetaFinanceira")',
+            index: '@Url.Action("Index", "MetaFinanceira")'
+        }
+    });
+</script>

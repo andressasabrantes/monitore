@@ -30,5 +30,17 @@ namespace Data.Repositories
             _dbContext.MetasFinanceiras.Remove(metafinanceira);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task EditarAsync(MetaFinanceira metafinanceira)
+        {
+            var metafinanceiraeditada = new {
+                Titulo = metafinanceira.Titulo,
+                Descricao = metafinanceira.Descricao,
+                ValorMeta = metafinanceira.ValorMeta
+            };
+
+            await _dbContext.UpdateEntryAsync<MetaFinanceira>(metafinanceira.Id, metafinanceiraeditada);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
