@@ -3,7 +3,8 @@ var metafinanceira = (function () {
         urls: {
             index: '',
             cadastrar: '',
-            excluir: ''
+            excluir: '',
+            editar: ''
         }
     }
 
@@ -31,11 +32,20 @@ var metafinanceira = (function () {
         });
     };
 
-    
+    var Editar = function () {
+        var model = $('#formEditarMeta').serializeObject();
+        $.post(configs.urls.editar, model).done(() => {
+            location.href = configs.urls.index;
+            site.toast.success('Meta editada com sucesso!');
+        }).fail((msg) => {
+            site.toast.error(msg);
+        });
+    };
 
     return {
         init: init,
         Cadastrar: Cadastrar,
-        Excluir: Excluir
+        Excluir: Excluir,
+        Editar: Editar
     }
 })();

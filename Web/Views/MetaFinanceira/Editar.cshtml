@@ -1,7 +1,7 @@
 @model MetaFinanceira
 
-<form id="formEditarMeta" onsubmit="metafinanceira.Cadastrar()">
-
+<form id="formEditarMeta">
+    <input asp-for="Id" hidden />
         <div class="border-bottom border-3 border-secondary mt-5">
             <h3 class="text-white-50">Editar meta @Model.Titulo</h3>
         </div>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-success" style="width:150px">Editar</button>
+            <button type="submit" class="btn btn-success" style="width:150px" onclick="metafinanceira.Editar(@Model.Id)">Editar</button>
             <a asp-controller="MetaFinanceira" asp-action="BuscarMetaFinanceira" class="btn btn-secondary" style="width:150px">
                 Voltar
             </a>
@@ -34,7 +34,7 @@
 <script>
     metafinanceira.init({
         urls: {
-            excluir: '@Url.Action("Excluir", "MetaFinanceira")',
+            editar: '@Url.Action("Editar", "MetaFinanceira")',
             index: '@Url.Action("Index", "MetaFinanceira")'
         }
     });
