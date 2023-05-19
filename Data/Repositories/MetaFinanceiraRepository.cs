@@ -42,5 +42,10 @@ namespace Data.Repositories
             await _dbContext.UpdateEntryAsync<MetaFinanceira>(metafinanceira.Id, metafinanceiraeditada);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<MetaFinanceira> DetalhesAsync(int id)
+        {
+            return await _dbContext.MetasFinanceiras.FindAsync(id);
+        }
     }
 }

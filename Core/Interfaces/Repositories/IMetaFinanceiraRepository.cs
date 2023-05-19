@@ -9,5 +9,6 @@ namespace Core.Interfaces.Repositories
         Task<MetaFinanceira> BuscarMetaFinanceiraPorIdAsync(int id);
         Task ExcluirAsync(int id);
         Task EditarAsync(MetaFinanceira metafinanceira);
+        Task<MetaFinanceira> DetalhesAsync(int id);
     }
 }

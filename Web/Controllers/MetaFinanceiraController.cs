@@ -55,5 +55,12 @@ namespace Web.Controllers
             await _metafinanceiraRepository.EditarAsync(metafinanceira);
             return Ok();
         }
+
+        [HttpGet("detalhes")]
+        public async Task<IActionResult> MostrarViewDetalhes(int id) 
+        {
+            return View("Detalhes", await _metafinanceiraRepository.BuscarMetaFinanceiraPorIdAsync(id));
+        }
+
     }
 }
