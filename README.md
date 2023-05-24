@@ -2,7 +2,7 @@
 O Gerenciador de Finanças Pessoais é um sistema web desenvolvido utilizando C# ASP.NET Core MVC com Entity Framework, Bootstrap e SQL Server como banco de dados. Ele foi projetado para auxiliar os usuários a controlar suas metas financeiras de forma eficiente, permitindo o registro, edição, exclusão e visualização das metas.
 
 ## Funcionalidades
-Registro de metas financeiras: Os usuários podem criar e registrar suas metas financeiras no sistema. Isso inclui definir uma descrição, valor da meta e prazo para alcançá-la.
+Registro de metas financeiras: Os usuários podem criar e registrar suas metas financeiras no sistema. Isso inclui definir uma descrição e o valor da meta.
 
 Edição de metas: Os usuários têm a opção de editar as informações das metas já registradas, como a descrição e valor.
 
