@@ -1,14 +1,25 @@
 # Monitore - Gerenciador de Finanças Pessoais
 O Gerenciador de Finanças Pessoais é um sistema web desenvolvido utilizando C# ASP.NET Core MVC com Entity Framework, Bootstrap e SQL Server como banco de dados. Ele foi projetado para auxiliar os usuários a controlar suas metas financeiras de forma eficiente, permitindo o registro, edição, exclusão e visualização das metas.
 
+![1](https://github.com/andressasabrantes/monitore/assets/87620436/a65026ac-5380-465e-a20e-68283eb2e0b1)
+
 ## Funcionalidades
+Listagem de metas financeiras: O usuário consegue ver todas as metas que foram registradas no sistema.
+![2](https://github.com/andressasabrantes/monitore/assets/87620436/6a5675e8-1fe2-4037-8614-c94500106bd0)
+
 Registro de metas financeiras: Os usuários podem criar e registrar suas metas financeiras no sistema. Isso inclui definir uma descrição e o valor da meta.
+![3](https://github.com/andressasabrantes/monitore/assets/87620436/b93d25f7-a5d3-4a76-81f0-e612e5b46f79)
 
 Edição de metas: Os usuários têm a opção de editar as informações das metas já registradas, como a descrição e valor.
+![4](https://github.com/andressasabrantes/monitore/assets/87620436/7fe0b247-780c-46a7-be78-7c0a19b0522a)
 
 Exclusão de metas: Caso uma meta não seja mais relevante, os usuários podem excluí-la do sistema.
+![5](https://github.com/andressasabrantes/monitore/assets/87620436/75b6f242-0c02-4471-85cf-f1f570359292)
 
-Visualização de metas: O sistema oferece uma visualização clara e organizada de todas as metas registradas pelo usuário, incluindo detalhes como descrição e valor.
+
+Detalhes de metas: O sistema oferece uma visualização mais detalhada da meta escolhida pelo usuário, incluindo detalhes como descrição e valor, ou outros detalhes que forem adicionados em versões seguintes.
+![6](https://github.com/andressasabrantes/monitore/assets/87620436/03d28d67-bc52-4e39-81ea-20358b520bbb)
+
 
 ## Tecnologias Utilizadas
 O Gerenciador de Finanças Pessoais foi desenvolvido utilizando as seguintes tecnologias:
