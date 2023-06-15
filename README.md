@@ -13,7 +13,7 @@ Registro de metas financeiras: Os usuários podem criar e registrar suas metas f
 Edição de metas: Os usuários têm a opção de editar as informações das metas já registradas, como a descrição e valor.
 ![4](https://github.com/andressasabrantes/monitore/assets/87620436/7fe0b247-780c-46a7-be78-7c0a19b0522a)
 
-Exclusão de metas: Caso uma meta não seja mais relevante, os usuários podem excluí-la do sistema.
+Exclusão de metas: Caso uma meta não seja mais relevante, o usuário pode excluí-la do sistema.
 ![5](https://github.com/andressasabrantes/monitore/assets/87620436/75b6f242-0c02-4471-85cf-f1f570359292)
 
 
